@@ -1,6 +1,10 @@
 # Housing-Price-Prediction-Model
-Using Python to predict housing prices and perfoming an exploratory data analyis before modeling the linear regression model and printing out the MSE,MAE, and RMSE
-Here is the rsults 
+Using Python to predict housing prices and perfoming an exploratory data analyis before modeling the linear regression model and printing out the MSE,MAE, and RMSE.
+
+Please make sure you run the python code in a google colab environment. 
+
+The results are as follows:
+
 Mean Squared Error (MSE): 54.60196067337693
 Mean Absolute Error (MAE): 5.418035098629173
 Root Mean Squared Error (RMSE): 7.389313951469171
