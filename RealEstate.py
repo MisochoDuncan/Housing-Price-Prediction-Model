@@ -65,13 +65,37 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # 6. Train the Model
 from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
 
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+import numpy as np
+
+#Train Linear Regression
 model = LinearRegression()
 model.fit(X_train, y_train)
 
+# Train Random Forest
+rf_model = RandomForestRegressor(random_state=42)
+rf_model.fit(X_train, y_train)
+
+# Train Decision Tree
+dt_model = DecisionTreeRegressor(random_state=42)
+dt_model.fit(X_train, y_train)
+
 # 7. Evaluate the Model
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-import numpy as np
+# Random Forest evaluation
+rf_y_pred = rf_model.predict(X_test)
+rf_mse = mean_squared_error(y_test, rf_y_pred)
+rf_mae = mean_absolute_error(y_test, rf_y_pred)
+rf_rmse = np.sqrt(rf_mse)
+
+# Decision Tree evaluation
+dt_y_pred = dt_model.predict(X_test)
+dt_mse = mean_squared_error(y_test, dt_y_pred)
+dt_mae = mean_absolute_error(y_test, dt_y_pred)
+dt_rmse = np.sqrt(dt_mse)
+
 
 # Make predictions on the testing set
 y_pred = model.predict(X_test)
@@ -81,6 +105,16 @@ mse = mean_squared_error(y_test, y_pred)
 mae = mean_absolute_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 
+# 8. Compare the Models
+print("Linear Regression:")
 print("Mean Squared Error (MSE):", mse)
 print("Mean Absolute Error (MAE):", mae)
 print("Root Mean Squared Error (RMSE):", rmse)
+print("\nRandom Forest:")
+print("Mean Squared Error (MSE):", rf_mse)
+print("Mean Absolute Error (MAE):", rf_mae)
+print("Root Mean Squared Error (RMSE):", rf_rmse)
+print("\nDecision Tree:")
+print("Mean Squared Error (MSE):", dt_mse)
+print("Mean Absolute Error (MAE):", dt_mae)
+print("Root Mean Squared Error (RMSE):", dt_rmse)
