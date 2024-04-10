@@ -10,6 +10,7 @@ Mean Absolute Error (MAE): 5.418035098629173
 Root Mean Squared Error (RMSE): 7.389313951469171
 and here are some of the screenshots
 
+![image](https://github.com/MisochoDuncan/Housing-Price-Prediction-Model/assets/124530005/d1b4d837-c624-4b0e-937b-99c0489dc57e)
 ![image](https://github.com/MisochoDuncan/Housing-Price-Prediction-Model/assets/124530005/4e3c97ca-07ed-458a-914c-0ca69c15bbae)
 ![image](https://github.com/MisochoDuncan/Housing-Price-Prediction-Model/assets/124530005/b0010b79-5bb6-4c4d-aa07-51e7f5d647d1)
 ![image](https://github.com/MisochoDuncan/Housing-Price-Prediction-Model/assets/124530005/a3171aeb-31ee-4dfa-b25e-39cc12135069)
